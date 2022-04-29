@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/rv_known_users"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:itemCount="2"
+		tools:listitem="@layout/rv_item_user" />
+
+	<TextView
+		android:id="@+id/tv_find_someone_else"
+		style="@style/Label"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:text="@string/find_someone_else"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/rv_known_users" />
+
+	<EditText
+		android:id="@+id/et_search_user"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:ems="10"
+		android:hint="@string/search"
+		android:inputType="textPersonName"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/tv_find_someone_else" />
+
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/rv_searched_users"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/et_search_user"
+		tools:itemCount="3"
+		tools:listitem="@layout/rv_item_user" />
+
+	<ProgressBar
+		android:id="@+id/user_loading_bar"
+		style="?android:attr/progressBarStyle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@+id/rv_searched_users" />
+</androidx.constraintlayout.widget.ConstraintLayout>

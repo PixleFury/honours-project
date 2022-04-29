@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	style="@style/Container"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	tools:context=".activity.ListDetailsActivity">
+
+	<Button
+		android:id="@+id/btn_ready_list"
+		style="@style/Button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:text="@string/menu_shop"
+		app:layout_constraintBottom_toTopOf="@+id/btn_delete_list"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<Button
+		android:id="@+id/btn_delete_list"
+		style="@style/Button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:backgroundTint="#BD372D"
+		android:text="@string/delete_list"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<Button
+		android:id="@+id/btn_share_list"
+		style="@style/Button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:text="@string/share_list"
+		app:layout_constraintBottom_toTopOf="@+id/btn_edit_list_items"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<Button
+		android:id="@+id/btn_edit_list_items"
+		style="@style/Button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginBottom="16dp"
+		android:text="@string/edit_list_items"
+		app:layout_constraintBottom_toTopOf="@+id/btn_ready_list"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent" />
+
+	<TextView
+		android:id="@+id/tv_list_details_name"
+		style="@style/Title"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		tools:text="List Name" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
