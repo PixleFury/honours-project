@@ -45,6 +45,7 @@ class ProductsActivity : AppCompatActivity() {
 
 				// Pagination for many results
 				productsRecycler.addOnScrollListener(object: RecyclerView.OnScrollListener() {
+					// Adapted from dominicoder - https://stackoverflow.com/a/45909112, converted to Kotlin and integrated into the project
 					override fun onScrolled(rv: RecyclerView, dx: Int, dy: Int) {
 						if (!hasMorePagesToLoad) return;
 						if (isLoadingRequest) return;
